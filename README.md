@@ -28,7 +28,7 @@ Drop any song. AI strips the vocals in 30 seconds. Synced lyrics on screen, phon
 | **Windows** (64-bit) | [`.exe`](https://github.com/CasaVargas/beltr-releases/releases/latest) |
 | **Linux** (AppImage) | [`.AppImage`](https://github.com/CasaVargas/beltr-releases/releases/latest) |
 
-Try 5 songs free. Full license: **$39.99** one-time, forever.
+Try 5 songs free. Full license: **$19.99** launch price (reg. $29.99), one-time, forever.
 
 ## System Requirements
 
