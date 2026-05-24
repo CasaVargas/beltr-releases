@@ -12,6 +12,10 @@
 
 ---
 
+<p align="center">
+  <img src="beltr-demo.gif" alt="Beltr in action: synced lyrics on the TV while a phone acts as the wireless remote" width="800">
+</p>
+
 Drop any song. AI strips the vocals in 30 seconds. Synced lyrics on screen, phones as wireless remotes. One-time purchase, no subscription, works offline.
 
 ## How It Works
