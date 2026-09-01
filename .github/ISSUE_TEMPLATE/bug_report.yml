@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in Beltr is broken or behaves unexpectedly.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A support bundle (in the app: **Settings → About → Get Support Bundle**) is the fastest way to a fix, but it contains your logs, so email it to support@beltr.app rather than attaching it here. Never post a license key or order number in a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: Beltr version
+      description: Settings → About shows it. Say "container" plus the image tag for a self-hosted install.
+      placeholder: v1.61.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Where is Beltr running?
+      options:
+        - macOS (Apple Silicon)
+        - Windows (installer)
+        - Windows (Microsoft Store)
+        - Linux (AppImage)
+        - Linux (.deb)
+        - Unraid / Docker (CPU image)
+        - Unraid / Docker (NVIDIA image)
+        - Unraid / Docker (Intel image)
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part?
+      options:
+        - Preparing a song (separation, lyrics, alignment)
+        - TV screen (web /tv)
+        - Apple TV app
+        - Android TV / Google TV app
+        - Phone remote (browser)
+        - Beltr Remote app (iPhone)
+        - Beltr Remote app (Android)
+        - Dashboard / settings
+        - Import or export (CDG, MP3+G, MIDI, video, USB)
+        - License or trial
+        - Other
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what happened instead. Song title and artist help when it is a preparation problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: GPU pack installed? Reverse proxy? Screenshots or a short screen recording are welcome.

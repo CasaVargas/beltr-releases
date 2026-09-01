@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: FAQ
+    url: https://beltr.app/faq
+    about: Setup, formats, GPU support, Unraid, pricing and refunds are answered here first.
+  - name: Discord
+    url: https://discord.gg/PYU9g6GsRq
+    about: Quick help from other hosts and the developer.
+  - name: Email support
+    url: mailto:support@beltr.app
+    about: Anything involving a license key, an order number or a support bundle. Please do not post those publicly.
+  - name: Feature requests and questions
+    url: https://github.com/CasaVargas/beltr-releases/discussions
+    about: Vote on what gets built next or ask how something works.
