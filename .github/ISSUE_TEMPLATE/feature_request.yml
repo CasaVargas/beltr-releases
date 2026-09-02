@@ -1,0 +1,33 @@
+name: Feature request
+description: Something you wish Beltr did.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas are also welcome in [Discussions](https://github.com/CasaVargas/beltr-releases/discussions), where other hosts can vote on them. Use this form if you have a specific, well-defined request.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The situation at your karaoke night, not the solution yet.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like Beltr to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where would it live?
+      multiple: true
+      options:
+        - Desktop app
+        - TV screen / TV apps
+        - Phone remote / Beltr Remote app
+        - Self-hosted container
+        - Import / export
+        - Other
