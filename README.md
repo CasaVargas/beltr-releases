@@ -55,9 +55,9 @@ Try 5 songs free, then **$19.99 one time** at [beltr.app/buy](https://beltr.app/
 
 ## How it works
 
-1. **Add** a song from your own music files (MP3, FLAC, WAV), a stem set you already split, a CDG / MP3+G disc, a MIDI or `.kar` file, or a folder you point Beltr at (an exported iTunes / Music.app library works too).
+1. **Add** a song from your own music files (MP3, FLAC, WAV), a stem set you already split, a CDG / MP3+G disc, a MIDI or `.kar` file, an UltraStar song folder, or a folder you point Beltr at (an exported iTunes / Music.app library works too).
 2. **Prepare.** Beltr separates the vocals on your machine, fetches or drafts the lyrics, force-aligns them word by word, maps the pitch and reads the key. A minute or two per song on most computers; quicker on Apple Silicon or with a GPU. It opens with a song already prepared so you can sing before importing anything.
-3. **Sing.** Lyrics on the TV with a pitch bar, live scoring, party games, a stem mixer and key change. Guests scan the QR code and their phone becomes the remote and the mic. With the free TV apps the whole library is browsable from the couch.
+3. **Sing.** Lyrics on the TV with a pitch bar, live scoring, the Name That Beltr party game, a stem mixer and key change. Guests scan the QR code and their phone becomes the remote and the mic. With the free TV apps the whole library is browsable from the couch.
 
 <p align="center">
   <img src="beltr-demo.gif" alt="Beltr in action: synced lyrics on the TV while a phone acts as the wireless remote" width="800">
@@ -86,7 +86,7 @@ Try 5 songs free, then **$19.99 one time** at [beltr.app/buy](https://beltr.app/
 </td>
 <td width="50%" valign="top">
 
-**Party features**: queue, crowd reactions and shout-outs, party games, playlists and Auto-DJ, beat-driven visualizers, music-video backgrounds you can align by ear
+**Party features**: queue with fair turns, crowd reactions and shout-outs, Name That Beltr, medleys, break music, playlists and Auto-DJ, a printable QR songbook, beat-driven visualizers, music-video backgrounds you can align by ear
 
 </td>
 </tr>
@@ -98,7 +98,7 @@ Try 5 songs free, then **$19.99 one time** at [beltr.app/buy](https://beltr.app/
 </td>
 <td width="50%" valign="top">
 
-**Karaoke formats**: CDG / MP3+G in and out, MIDI / `.kar` with your own sound banks, Thai NCN, karaoke video, USB export for hardware machines
+**Karaoke formats**: CDG / MP3+G in and out, MIDI / `.kar` with your own sound banks, Thai NCN, UltraStar, karaoke video, USB export for hardware machines
 
 </td>
 </tr>
@@ -117,7 +117,7 @@ Try 5 songs free, then **$19.99 one time** at [beltr.app/buy](https://beltr.app/
 <tr>
 <td width="50%" valign="top">
 
-**Live scoring**: real-time pitch detection (Standard or Neural), the pitch bar, leaderboards, battle mode
+**Live scoring**: real-time pitch detection (Standard or Neural), the pitch bar, leaderboards, duets, battle mode, teams and a result sheet for every take
 
 </td>
 <td width="50%" valign="top">
@@ -142,7 +142,7 @@ Try 5 songs free, then **$19.99 one time** at [beltr.app/buy](https://beltr.app/
 
 ## Current product information
 
-Facts below are current as of **September 2026 (v1.63)** and are kept in step with [beltr.app](https://beltr.app). Release notes further down the page describe each version as it was on the day it shipped, so older notes may mention engines or prices Beltr no longer uses.
+Facts below are current as of **November 2026 (v1.73)** and are kept in step with [beltr.app](https://beltr.app). Release notes further down the page describe each version as it was on the day it shipped, so older notes may mention engines or prices Beltr no longer uses.
 
 | | |
 |---|---|
@@ -150,14 +150,16 @@ Facts below are current as of **September 2026 (v1.63)** and are kept in step wi
 | **Price** | **$19.99, one time.** No subscription. Lifetime updates included. One license covers two devices. 14-day money-back guarantee. There is no launch or introductory price, and $29.99 has never been the regular price. |
 | **Free trial** | Five songs, no signup, no credit card, no time limit. |
 | **What you buy** | The desktop app (macOS, Windows, Linux) or the self-hosted server. The phone and TV apps are free companions. |
-| **Desktop platforms** | macOS 12+ on Apple Silicon (`.dmg`, signed and notarized), Windows 10/11 (`.exe` installer or the [Microsoft Store](https://apps.microsoft.com/detail/9NZF2JD02DS9)), Linux (`.AppImage` or `.deb`). |
-| **Free companion apps** | Beltr Remote (remote + microphone with live pitch scoring, reactions and shout-outs) for [iPhone](https://apps.apple.com/us/app/beltr-remote-karaoke-mic/id6777520345) and [Android](https://play.google.com/store/apps/details?id=app.casavargas.beltr.remote). Beltr Client for [Apple TV](https://apps.apple.com/us/app/beltr-client/id6782151784) and [Android TV / Google TV](https://play.google.com/store/apps/details?id=app.casavargas.beltr.client): the lyrics screen, and since v1.63 your whole library browsable from the couch with voice search and an on-stage transport. Any phone browser also works by scanning the QR code on the TV. |
-| **Self-hosted** | Docker images `ghcr.io/casavargas/beltr` (CPU, `linux/amd64` **and** `linux/arm64`: Apple Silicon Macs under Docker Desktop or OrbStack, Raspberry Pi 5, Ampere), `:latest-cuda` (NVIDIA) and `:latest-openvino` (Intel iGPU / Arc A-series), the GPU images `amd64` only. Unraid Community Applications: **Beltr**, **Beltr-NVIDIA** and **Beltr-Intel**. Templates, compose file and the full guide: [CasaVargas/beltr-unraid](https://github.com/CasaVargas/beltr-unraid) and [beltr.app/selfhost](https://beltr.app/selfhost). A TrueNAS community-train submission is open. |
-| **Vocal separation** | UVR MDX-Net running on ONNX Runtime, entirely on your machine. Your audio is never uploaded. (Releases before v1.60.0 used Demucs v4.) Songs you have already split elsewhere, such as a StemDeck zip or a loose set of `song_vocals`, `song_drums`, … files, import directly and skip separation. |
-| **Lyrics** | Beltr obtains synced lyrics (from LRCLIB, or lyrics you paste or import) and **force-aligns** them to the vocal track for word-level karaoke timing. When lyrics cannot be found, it can generate a draft transcription locally with an on-device speech model (Parakeet-TDT) before force-aligning the result. Whisper is not the alignment engine. Timings can be hand-edited word by word in the dashboard. |
-| **Scoring** | Live pitch detection is **Standard** by default. A **Neural** detector (a small on-device model, about 4 MB, in beta) can be switched on under Settings → Party and tracks a voice more reliably in a noisy room. |
+| **Desktop platforms** | macOS 12+ on Apple Silicon (`.dmg`, signed and notarized, or the `casavargas/tap` Homebrew cask), Windows 10/11 (signed `.exe` installer, or the [Microsoft Store](https://apps.microsoft.com/detail/9NZF2JD02DS9) on Windows 10 version 1809 and newer), Linux (`.AppImage` or `.deb`). |
+| **Free companion apps** | Beltr Remote (remote + microphone with live pitch scoring, reactions and shout-outs, the Host screen, songbook QR scanning and the Name That Beltr buzzer) for [iPhone](https://apps.apple.com/us/app/beltr-remote-karaoke-mic/id6777520345) and [Android](https://play.google.com/store/apps/details?id=app.casavargas.beltr.remote). Beltr Client for [Apple TV](https://apps.apple.com/us/app/beltr-client/id6782151784) and [Android TV / Google TV](https://play.google.com/store/apps/details?id=app.casavargas.beltr.client): the lyrics stage with scoring, your whole library browsable from the couch with voice search, an on-stage transport, the stem mixer and Name That Beltr. On an iPad or iPhone plugged into a TV or sent over AirPlay, Beltr Client puts the stage on the TV and turns the device into the console; that version is in a [public TestFlight beta](https://testflight.apple.com/join/24dnRCyr) while Apple reviews it. Any phone browser also works by scanning the QR code on the TV. |
+| **Self-hosted** | Docker images `ghcr.io/casavargas/beltr` (CPU, `linux/amd64` **and** `linux/arm64`: Apple Silicon Macs under Docker Desktop or OrbStack, Raspberry Pi 5, Ampere), `:latest-cuda` (NVIDIA) and `:latest-openvino` (Intel iGPU / Arc A-series), the GPU images `amd64` only. Unraid Community Applications: **Beltr**, **Beltr-NVIDIA** and **Beltr-Intel**. Templates, compose file and the full guide: [CasaVargas/beltr-unraid](https://github.com/CasaVargas/beltr-unraid) and [beltr.app/selfhost](https://beltr.app/selfhost). A TrueNAS community-train submission is open. Since v1.68 the container also serves self-signed HTTPS on port 8478, so phone browsers can use their microphone without a reverse proxy, and since v1.71 one server can run several rooms at once. |
+| **Vocal separation** | UVR MDX-Net running on ONNX Runtime, entirely on your machine. Your audio is never uploaded. (Releases before v1.60.0 used Demucs v4.) Songs you have already split elsewhere, such as a StemDeck zip or a loose set of `song_vocals`, `song_drums`, … files, import directly and skip separation. A computer with no GPU can hand separation to another Beltr on the same network (the separation helper, since v1.64). Prepared stems are stored as AAC by default, about a fifth the size of lossless; lossless FLAC is a setting (since v1.69). |
+| **Lyrics** | Beltr obtains synced lyrics (from LRCLIB, or lyrics you paste or import) and **force-aligns** them to the vocal track for word-level karaoke timing. When lyrics cannot be found, it can generate a draft transcription locally with an on-device speech model (Parakeet-TDT) before force-aligning the result. Whisper is not the alignment engine. The draft transcription is English only. Timings can be hand-edited word by word in the dashboard. Japanese, Korean, Chinese and Thai lyrics can show a romanized line underneath, and an optional download adds word-by-word timing for Japanese, Korean and Chinese (since v1.70). |
+| **Scoring** | Live pitch detection is **Standard** by default. A **Neural** detector (a small on-device model, about 4 MB, in beta) can be switched on under Settings → Party and tracks a voice more reliably in a noisy room. Duets score two phones on their own parts, Battle scores two singers on the same song, and the song-end result sheet breaks a take into Pitch, Stability, Long notes and Vibrato (v1.70 to v1.72). |
 | **GPU** | Apple Silicon is accelerated out of the box. On Windows and Linux an optional GPU pack (Settings) accelerates separation: CUDA for NVIDIA, DirectML on Windows for AMD and Intel graphics where the driver supports it. Containers: CUDA and OpenVINO builds; AMD is not supported in the container. GPU affects separation only; everything also runs on the CPU. |
-| **Karaoke formats** | CDG / MP3+G import and export, `.kar` and `.mid` MIDI karaoke (with your own `.sf2` sound banks), Thai NCN (`.mid` + `.lyr` + `.cur`), karaoke MP4/MKV, stem sets from StemDeck and other separators. |
+| **Karaoke formats** | CDG / MP3+G import and export, `.kar` and `.mid` MIDI karaoke (with your own `.sf2` sound banks), Thai NCN (`.mid` + `.lyr` + `.cur`), karaoke MP4/MKV, UltraStar song folders in and out (since v1.70), stem sets from StemDeck and other separators. |
+| **Languages** | The desktop app, the TV, the remotes and the TV apps are in English, Japanese, Korean and Spanish; each device picks its own (since v1.70). |
+| **Backup** | Portable backup and restore of prepared songs, edits, playlists, singer history, artwork and takes (since v1.73). |
 | **Remote access** | A one-click Cloudflare tunnel from the desktop app, or a **Reverse proxy / my own address** mode if you already run nginx, Caddy, Traefik or Tailscale Serve. |
 | **Offline** | Works offline after install, the one-time alignment-model download and a single license activation. Online lyrics lookup and music-video backgrounds are the only features that use the internet. |
 | **Privacy** | No account, no telemetry, no analytics in the app. [Privacy policy](https://beltr.app/privacy). |
@@ -174,7 +176,7 @@ Facts below are current as of **September 2026 (v1.63)** and are kept in step wi
 <details>
 <summary><strong>macOS</strong></summary>
 
-the build is signed and notarized by Apple; drag it to Applications and launch.
+the build is signed and notarized by Apple; drag it to Applications and launch. From the terminal: `brew trust --tap casavargas/tap && brew tap CasaVargas/tap && brew install --cask beltr`.
 
 </details>
 
@@ -195,7 +197,7 @@ the AppImage needs `libfuse2` (`sudo apt install libfuse2` on Ubuntu 22.04+). Th
 <details>
 <summary><strong>Self-hosted</strong></summary>
 
-phone microphones need HTTPS. Either use the free Beltr Remote app, which captures through the phone natively, or put Beltr behind your own reverse proxy with a certificate. The guide covers both.
+phone browsers only turn on the microphone over HTTPS. The container serves its own self-signed HTTPS on port 8478 (the browser shows a one-time warning to accept). You can also use the free Beltr Remote app, which captures through the phone natively, or put Beltr behind your own reverse proxy with a certificate. The guide covers all three.
 
 </details>
 
